@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+.unam{
+    max-width: 5rem;
+    align-items: center;
+
+
+}
+.nav-lista{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+
+}
+.nav-lista li a h5 {
+   
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    background-color:  rgb(12, 20, 158);
+    font-weight: bolder ;
+
+}
+.menuopen,
+.menuclose{
+    display: none;
+
+}
+@media screen and (max-width: 550px) {
+    .menuopen,
+    .menuclose {
+        display: block;
+         border: 0;
+         font-size: 1.25rem;
+         background-color: white;
+         cursor: pointer;
+         color: rgb(12, 20, 158);
+
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(40, 10, 104);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+
+    }
+    .nav-lista{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-lista li a h5 {
+        color: white;
+    }
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+.home {
+    background-color: rgb(255, 255, 255);
+
+}
+.container-table {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.subtitle {
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    text-align: center;
+    background-color:  rgb(12, 20, 158);
+
+}
+.card-container {
+    background-color: rgb(12, 20, 158);
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    font-family: sans-serif;
+    color: #fff;
+
+    
+}
+.bot {
+    border: 2px solid #253058;
+    border-radius: 50px ;
+    width: fit-content;
+    font-family: sans-serif;
+    margin: 20px auto;
+    padding: 10px 22px;
+    display: block;
+    text-decoration: none;
+    color: rgb(232, 238, 243);
+
+}
+.bot:hover{
+    background: white;
+    color: #151D3B;
+
+}
+@media screen and (max-width: 550px){
+    .home, .container, .card-container, .resumen{
+        width: auto;
+        margin: auto;
+    }
+    
+}
+
+
+
+.contacto{
+    background-color:  rgb(208, 208, 208);
+    color: rgb(12, 20, 158);
+    padding: 150px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+
+}
+.contacto form{
+ display: grid;
+ grid-column: 1 / 3;
+}
+
+.contacto h2{
+    font-size: 48px;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contacto .fila{
+    display: flex;
+
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+
+}
+
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color:  rgb(208, 208, 208);
+    padding: 20px;
+    width: 350px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 20px;
+
+}
+.contacto .col input{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color:  rgb(208, 208, 208);
+    color: black;
+    font-size: 18px;
+
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color:#fff;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #027159;
+    z-index: -1;
+    transition: 1s;
+
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+    .contacto, .contenido-seccion, .col, .fila{
+        width: auto;
+        margin: auto;
+
+    }
+    .contacto .fila{
+        display: block;
+
+    }
+    .contacto .fila .col{
+        width: 100%;
+        margin-top: 100px;
+        
+    }
+    
+}
+
+.resumen{
+    background-color: rgb(12, 20, 158);
+    text-align: center;
+    border-radius: 10px;
+    width: auto;
+    padding: auto;
+    font-family: sans-serif;
+    color: #fff;
+
+    
+}
+
+ody {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
